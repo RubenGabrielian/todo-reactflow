@@ -1,6 +1,6 @@
 import { StyledToDoListHeader } from "../../../components/to-do-list/header/header.styled";
 import Container from "../../../components/molecules/container/container";
-import Flex from "../../molecules/flex";
+import Flex from "../../molecules/flex/flex";
 import { Button } from "antd";
 import { PlusOutlined } from "@ant-design/icons";
 import uuid from "react-uuid";

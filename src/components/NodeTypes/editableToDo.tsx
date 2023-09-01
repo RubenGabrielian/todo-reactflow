@@ -1,14 +1,16 @@
+import React from 'react';
 import {Button, Form, Input, notification} from "antd";
 import TextArea from "antd/es/input/TextArea";
 import {useUpdateToDoContent} from "../../hooks/todos/useUpdateTodoContent.hook";
 import useGetTodos from "../../hooks/todos/useGetTodos.hook";
+import {IFormValues} from "./types";
 
-export default function EditableToDo({data, setEditable}) {
+export default function EditableToDo({data, setEditable} : {data: IFormValues, setEditable: (status:boolean) => void}) {
 
     const {refetch} = useGetTodos();
     const [api, contextHolder] = notification.useNotification();
 
-    const {useUpdateToDoContentMutation} = useUpdateToDoContent((data) => {
+    const {useUpdateToDoContentMutation} = useUpdateToDoContent(() => {
             refetch().then(() => {
                 setEditable(false);
             }).finally(() => {
@@ -20,14 +22,14 @@ export default function EditableToDo({data, setEditable}) {
             })
 
         },
-        (e) => {
+        () => {
             api.error({
                 message: `Error`,
                 description: "Something went wrong",
                 placement: "topRight",
             });
         })
-    const handleFinish = (values) => {
+    const handleFinish = (values: IFormValues) => {
         values.id = data.id;
         useUpdateToDoContentMutation.mutate(values);
     }

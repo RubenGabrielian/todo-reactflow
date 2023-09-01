@@ -1,24 +1,23 @@
-import React from "react";
+import { IFlex } from './types';
 
 export default function Flex({
   children,
-  direction = "row",
-  justifyContent = "flex-start",
-  alignItems = "flex-start",
-  flexWrap = "nowrap",
+  direction = 'row',
+  justifyContent = 'flex-start',
+  alignItems = 'flex-start',
+  flexWrap = 'nowrap',
   style = {},
-  className = "",
+  className = '',
   ...props
-}) {
+}: IFlex) {
   return (
     <div
       style={{
-        display: "flex",
+        display: 'flex',
         flexDirection: direction,
         alignItems,
         justifyContent,
         flexWrap,
-        ...style,
       }}
       className={className}
       {...props}

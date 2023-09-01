@@ -2,7 +2,7 @@
 import { StyledNavbar } from "../../../components/layouts/navbar/navbar.styled";
 import Link from "next/link";
 import Container from "../../../components/molecules/container/container";
-import Flex from "../../../components/molecules/flex";
+import Flex from "../../molecules/flex/flex";
 import type { MenuProps } from "antd";
 import { Dropdown } from "antd";
 import React from "react";

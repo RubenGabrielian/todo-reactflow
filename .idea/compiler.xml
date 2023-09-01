@@ -3,6 +3,5 @@
   <component name="TypeScriptCompiler">
     <option name="nodeInterpreterTextField" value="$PROJECT_DIR$/../../../../../Program Files/nodejs/node" />
     <option name="recompileOnChanges" value="true" />
-    <option name="showAllErrors" value="false" />
   </component>
 </project>

@@ -1,7 +1,7 @@
 "use client"
 import {Col, Row} from "antd";
-import SignInForm from "@/components/sign-in/form/form";
-import SignInBackground from "@/components/sign-in/background/background";
+import SignInForm from "../../components/sign-in/form/form";
+import SignInBackground from "../../components/sign-in/background/background";
 
 export default function SignIn() {
     return (

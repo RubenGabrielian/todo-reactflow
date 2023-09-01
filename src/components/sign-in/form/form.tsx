@@ -1,12 +1,12 @@
 "use client"
 import {Button, Form, Input} from "antd";
-import {StyledSignInForm} from "@/components/sign-in/form/component.styled";
-import Logo from "@/components/molecules/logo";
+import {StyledSignInForm} from "../../../components/sign-in/form/component.styled";
+import Logo from "../../molecules/logo/logo";
 
 export default function SignInForm() {
     return (
         <StyledSignInForm>
-            <Logo width={"80px"}/>
+            <Logo width={80}/>
             <h3>Log in to your account</h3>
             <Form layout={"vertical"}>
                 <Form.Item label={"Email"} name={"email"}>
