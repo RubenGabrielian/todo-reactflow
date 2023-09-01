@@ -6,9 +6,9 @@ let headers = {
   "Content-Type": "application/json",
 };
 
-if (localStorage.getItem("token")) {
-  headers["Authorization"] = `Bearer ${localStorage.getItem("token") || null}`;
-}
+// if (localStorage.getItem("token")) {
+//   headers["Authorization"] = `Bearer ${localStorage.getItem("token") || null}`;
+// }
 axios.interceptors.response.use(
   (response) => response,
   (error) => {

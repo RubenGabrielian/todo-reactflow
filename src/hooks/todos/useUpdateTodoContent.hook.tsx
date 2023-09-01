@@ -1,14 +1,14 @@
 import {useMutation, useQueryClient} from "react-query";
 import {todosApi} from "../../services/tasksService";
 
-export const useCreateToDo = (
+export const useUpdateToDoContent = (
     onSuccess = (data) => {
     },
     onError = (e) => {
     },
 ) => {
     const client = useQueryClient();
-    const useCreateTodoMutation = useMutation(todosApi.createTodo, {
+    const useUpdateToDoContentMutation = useMutation(todosApi.updateTodoContent, {
         onSuccess: (data) => {
             onSuccess(data);
         },
@@ -16,5 +16,5 @@ export const useCreateToDo = (
             onError(e);
         },
     });
-    return {useCreateTodoMutation}
+    return {useUpdateToDoContentMutation}
 };
